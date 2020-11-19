@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let arr=new Array();
+    // let size=+prompt("Nhap so luong phan tu: ");
+    let arr = new Array( 9, 5, 2, -19,-1, 6, -9, -3, 6, -10);
+    let size = arr.length;
+    //==============tim gia tri trong mang===================
+    // let abc = findValue(arr, size, 9);
+    // if (abc == -1) {
+    //     alert('không tìm thấy giá trị');
+    // } else document.write( 'tại các vị trí: ' + abc);
+    //===========================================================
+
+    //inputArray(arr,size);
+    // displayArray(arr,size);
+    // let xIndex=findFirstValue(arr,size,10);
+    // if(xIndex==-1){
+    //     alert("Khong tim thay");
+    // }else{
+    //     alert("Tim thay o vi tri thu "+xIndex);
+    // };
+    // document.write("Gia tri nho nhat la: "+ findMinValue(arr,size));
+    // document.write("Gia tri nho nhat la: "+ findMaxValue(arr,size));
+
+
+    //
+    // function inputArray(arr,size) {
+    //     for(let i=0;i<size;i++){
+    //         arr[i]=+prompt("Nhap phan tu thu "+i);
+    //     }
+    // // }
+    // function displayArray(arr,size) {
+    //     for(let i=0;i<size;i++){
+    //         document.write(arr[i]+" ");
+    //     }
+    // }
+    // function findFirstValue(arr,size,xNumber){
+    //     for(let i=0;i<size;i++){
+    //         if(arr[i]===xNumber){
+    //             return i;
+    //         }
+    //     }
+    //     return -1;
+    // }
+    /**
+     * hàm tìm kiếm các giá trị trong mảng
+     */
+    // function findValue(arr, size, xNumber) {
+    //     let result = new Array();
+    //     for (let i = 0; i < size; i++) {
+    //         if (arr[i] === xNumber) {
+    //             result.push(i);
+    //         }
+    //     }
+    //     if (result[0] !== '') {
+    //         return result;
+    //     }
+    //     else {
+    //         return -1;
+    //     }
+    // }
+
+    /**
+     * Hàm tìm giá trị min dương
+     */
+    // function findMinValue(arr, size) {
+    //     let min = arr[0];
+    //     for (let i = 1; i < size; i++) {
+    //         if (min < 0) {
+    //             min = arr[i];
+    //         } else if (min > arr[i] && arr[i] > 0) {
+    //             min = arr[i];
+    //         }
+    //     }
+    //
+    //     return min;
+    // }
+    //
+    // if (findMinValue(arr, size) <= 0) {
+    //     console.log('khong co so min duong');
+    // } else {
+    //     console.log(findMinValue(arr, size));
+    // }
+    /*Hàm tìm giá trị max am */
+    function findMaxValue(arr, size) {
+        let max = arr[0];
+        for (let i = 1; i < size; i++) {
+            if (max > 0) {
+                max = arr[i];
+            } else if (max < arr[i] && arr[i] < 0) {
+                max = arr[i];
+            }
+        }
+
+        return max;
+    }
+
+    if (findMaxValue(arr, size) > 0) {
+        console.log('khong co so max am');
+    } else {
+        console.log(findMaxValue(arr, size));
+    }
+// findmax===========
+    // function findMaxValue(arr,size) {
+    //     let max=arr[0];
+    //     for(i=1;i<size;i++){
+    //         if(max<arr[i]){
+    //             max=arr[i];
+    //         }
+    //     }
+    //     return max;
+    //
+    // }
+
+</script>
+
+</body>
+</html>
