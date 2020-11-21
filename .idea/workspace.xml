@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="510b9291-2d2e-4fd8-841c-21ecdeead539" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/luyenTapMang2/luyenTapMang2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/luyenTapMang2/luyenTapMang2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/luyenTapMang2/111.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ungDungFakingTextAreaOnTyping/ungDungFakingTextAreaOnTyping.html" beforeDir="false" afterPath="$PROJECT_DIR$/ungDungFakingTextAreaOnTyping/ungDungFakingTextAreaOnTyping.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ungDungFakingTextAreaOnTyping/ungDungFakingTextAreaOnTyping.js" beforeDir="false" afterPath="$PROJECT_DIR$/ungDungFakingTextAreaOnTyping/ungDungFakingTextAreaOnTyping.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,8 +15,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -64,7 +65,8 @@
       <workItem from="1605826773342" duration="8707000" />
       <workItem from="1605840403656" duration="19572000" />
       <workItem from="1605883888836" duration="6247000" />
-      <workItem from="1605922952385" duration="17002000" />
+      <workItem from="1605922952385" duration="19722000" />
+      <workItem from="1605956074800" duration="8261000" />
     </task>
     <servers />
   </component>
@@ -72,10 +74,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1605843103520">
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1605956390106">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1605801019277" />
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1605956390106" />
     <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1605843103520" />
   </component>
 </project>
