@@ -2,9 +2,71 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>[Bài tập] Tic tac toe</title>
+    <style>
+        td{
+            width: 50px;
+            height: 50px;
+        }
+    </style>
 </head>
 <body>
-
+<h2>[Bài tập] Tic tac toe</h2>
+<span>Chơi cờ caro:
+</span> <br><br><br>
+<div align="center" id="matrix"></div>
+<button onclick="playerA()">Người chơi A</button>
+<button onclick="playerB()">Người chơi B</button>
 </body>
+<script>
+    let chessbattle1 = []
+    for (i = 0; i < 10; i++) {
+        chessbattle1[i] = [];
+        for (j = 0; j < 50; j++) {
+            chessbattle1[i][j] = '*'
+        }
+    }
+    let battle = '<table border="1" > <tr >';
+    for (i = 0; i < 10; i++) {
+        for (j = 0; j < 50; j++) {
+            battle = battle + '<td  onclick="">' + chessbattle1[i][j] +'</td>'
+        }
+        battle = battle + '<tr>' + '<br>'
+    }
+    battle = battle + '</table>'
+    document.getElementById('matrix').innerHTML = battle;
+
+    function playerA() {
+        let positionx = +prompt('Nhập vào vị trí hàng: ');
+        let positiony = +prompt('Nhập vào vị trí cột: ');
+        chessbattle1[positionx][positiony] = 'X'
+        battle = '';
+        for (let i = 0; i < 10; i++) {
+            for (let j = 0; j < 50; j++) {
+                battle = battle + chessbattle1[i][j];
+            }
+            battle = battle + '<br>'
+        }
+        document.getElementById('matrix').innerHTML = battle;
+
+        //     if ()
+    }
+
+    function playerB() {
+        let positionx = +prompt('Nhập vào vị trí hàng: ');
+        let positiony = +prompt('Nhập vào vị trí cột: ');
+        chessbattle1[positionx][positiony] = 'O'
+        battle = '';
+        for (let i = 0; i < 10; i++) {
+            for (let j = 0; j < 50; j++) {
+                battle = battle + chessbattle1[i][j];
+            }
+            battle = battle + '<br>'
+        }
+        document.getElementById('matrix').innerHTML = battle;
+
+    }
+
+
+</script>
 </html>

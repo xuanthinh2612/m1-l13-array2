@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cờ ca rô</title>
+    <style>
+        td {
+            border: 1px solid black;
+            height: 40px;
+            width: 40px;
+        }
+    </style>
+</head>
+<body>
+<h1>Game Caro</h1>
+<input id="rows" type="number" placeholder="rows">
+<input id="cols" type="number" placeholder="cols">
+<button id="changeValue" onclick="drawTable()">Draw Table</button>
+<button id="reset" onclick="playAgain()">Play again</button>
+<p id="1"></p>
+<script>
+    let rows = 0;
+    let cols = 0;
+
+    function drawTable() {
+        let str = "";
+        rows = document.getElementById("rows").value;
+        cols = document.getElementById("cols").value;
+        for (let i = 0; i < rows; i++) {
+            str = str + "<table id='table' style='border: 1px solid black'><tr>";
+            for (let j = 0; j < cols; j++) {
+                str = str + "<td id='cell" + i + j + "' align='center' onclick='clickCell(this)'></td>";
+            }
+            str = str + "</tr>";
+        }
+        document.getElementById("1").innerHTML = str + "</table>";
+    }
+
+    let turn = 1;
+    let bool = true;
+
+    function clickCell(cell) {
+        if (cell.innerHTML != "") return;
+        if (bool == false) return;
+        if (turn == 1) {
+            cell.innerHTML = "X";
+            turn = 2;
+        } else {
+            cell.innerHTML = "O";
+            turn = 1;
+        }
+        addElementsToArray();
+        setTimeout(checkWin, 150);
+        setTimeout(checkDraw, 150);
+    }
+
+    let arr = new Array();x``
+
+    function addElementsToArray() {
+        for (let i = 0; i < rows; i++) {
+            arr[i] = new Array(cols);
+        }
+        for (let i = 0; i < rows; i++) {
+            for (let j = 0; j < cols; j++) {
+                arr[i][j] = document.getElementById("cell" + i + j).innerHTML;
+            }
+        }
+    }
+
+    function checkWin() {
+        for (let i = 0; i < rows; i++) {
+            for (let j = 0; j < cols; j++) {
+                if (arr[i][j] == "X" && arr[i + 1][j + 1] == "X" && arr[i + 2][j + 2] == "X") {
+                    bool = false;
+                    alert("player 1 win");
+                    return;
+                }
+                if (arr[i][j] == "O" && arr[i + 1][j + 1] == "O" && arr[i + 2][j + 2] == "O") {
+                    bool = false;
+                    alert("player 2 win");
+                    return;
+                }
+                if (arr[i][j] == "O" && arr[i + 1][j - 1] == "O" && arr[i + 2][j - 2] == "O") {
+                    bool = false;
+                    alert("player 2 win");
+                    return;
+                }
+                if (arr[i][j] == "X" && arr[i + 1][j - 1] == "X" && arr[i + 2][j - 2] == "X") {
+                    bool = false;
+                    alert("player 1 win");
+                    return;
+                }
+                if (arr[i][j] == "X" && arr[i][j + 1] == "X" && arr[i][j + 2] == "X") {
+                    bool = false;
+                    alert("player 1 win");
+                    return;
+                }
+                if (arr[i][j] == "O" && arr[i][j + 1] == "O" && arr[i][j + 2] == "O") {
+                    bool = false;
+                    alert("player 2 win");
+                    return;
+                }
+                if (arr[i][j] == "X" && arr[i + 1][j] == "X" && arr[i + 2][j] == "X") {
+                    bool = false;
+                    alert("player 1 win");
+                    return;
+                }
+                if (arr[i][j] == "O" && arr[i + 1][j] == "O" && arr[i + 2][j] == "O") {
+                    bool = false;
+                    alert("player 2 win");
+                    return;
+                }
+
+            }
+        }
+    }
+
+    function checkDraw(){
+        for (let i = 0; i < rows; i++){
+            for(let j = 0; j < cols; j++){
+                if(arr[i][j] != "X" && arr[i][j] != "O"){
+                    return;
+                }
+            }
+        }
+        bool = false;
+        alert("Draw");
+    }
+    function playAgain() {
+        for (let i = 0; i < rows; i++) {
+            for (let j = 0; j < cols; j++) {
+                document.getElementById("cell" + i + j).innerHTML = "";
+                bool = true;
+            }
+        }
+    }
+</script>
+</body>
+</html>

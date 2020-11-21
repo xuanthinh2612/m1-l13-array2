@@ -17,14 +17,69 @@
 <script>
     // let arr=new Array();
     // let size=+prompt("Nhap so luong phan tu: ");
-    let arr = new Array( 9, 5, 2, -19,-1, 6, -9, -3, 6, -10);
-    let size = arr.length;
+    let arr = new Array( 9, 12, -5,-8, 6, 11, 7,9,9,9,9);
+    let n = arr.length;
+    console.log(arr)
+    //==================Sắp xếp lại mảng tang dần========================================
+    function range(n,arr) {
+        for (i=0;i<n;i++) {
+            for (j=i+1;j<n;j++) {
+                if (arr[i]>arr[j]) {
+                    let temp = arr[i]
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+        console.log(arr)
+    }
+    // range(n,arr)
+    // ====================Xóa mảng bằng giá trị====================================
+    function deleteByValue(arr) {
+      let   number = +prompt('Nhập vào giá trị muốn xóa');
+      for (i=0;i<n;i++) {
+          if (number==arr[i]) {
+              for (let k=i;k<n;k++) {
+                  arr[k] = arr[k+1]
+              }
+              i--
+          }
+      }
+      document.write(arr.join(' '))
+    }
+    deleteByValue(arr);
+    //================================================
+    // function cut(arr,k) {
+    //     for (i=k;i<n-1;i++) {
+    //         arr[i] = arr[i+1];
+    //     }
+    //     console.log(arr)
+    //     n--
+    // }
+    // cut(arr,3)
     //==============tim gia tri trong mang===================
     // let abc = findValue(arr, size, 9);
     // if (abc == -1) {
     //     alert('không tìm thấy giá trị');
     // } else document.write( 'tại các vị trí: ' + abc);
     //===========================================================
+    // function insert(n,k) {
+    //     for (i=n-1;i>=k;i--) {
+    //         arr[i+1] = arr[i];
+    //     }
+    //     arr[k] = -4;
+    //     n++
+    //     console.log(arr[k])
+    //     console.log(arr.length)
+    //     console.log(arr)
+    // }
+    // insert(n,3)
+
+    // ==============================================
+    // sắp xếp mảng;
+    // xóa 1 giá trị trong mảng
+    // sắp xếp chuỗi theo chiều tăng dần
+    // ===============================
 
     //inputArray(arr,size);
     // displayArray(arr,size);
@@ -97,24 +152,25 @@
     //     console.log(findMinValue(arr, size));
     // }
     /*Hàm tìm giá trị max am */
-    function findMaxValue(arr, size) {
-        let max = arr[0];
-        for (let i = 1; i < size; i++) {
-            if (max > 0) {
-                max = arr[i];
-            } else if (max < arr[i] && arr[i] < 0) {
-                max = arr[i];
-            }
-        }
-
-        return max;
-    }
-
-    if (findMaxValue(arr, size) > 0) {
-        console.log('khong co so max am');
-    } else {
-        console.log(findMaxValue(arr, size));
-    }
+    // function findMaxValue(arr, size) {
+    //     let max = arr[0];
+    //     for (let i = 1; i < size; i++) {
+    //         if (max > 0) {
+    //             max = arr[i];
+    //         } else if (max < arr[i] && arr[i] < 0) {
+    //             max = arr[i];
+    //         }
+    //     }
+    //
+    //     return max;
+    // }
+    //
+    //
+    // if (findMaxValue(arr, size) > 0) {
+    //     console.log('khong co so max am');
+    // } else {
+    //     console.log(findMaxValue(arr, size));
+    // }
 // findmax===========
     // function findMaxValue(arr,size) {
     //     let max=arr[0];
